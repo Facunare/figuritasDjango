@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+{% block content %}
+
+<main class="main__figuritas">
+    <p class="error">{{error}}</p>
+    
+   
+    
+    <form method="POST" class="form__figus">
+        <h1 class="title_figus">Agregar Figuritas</h1>
+        {% csrf_token %}
+        {{form}}
+        <button>
+            Agregar
+        </button>
+    </form>
+</main>
+{% endblock %}

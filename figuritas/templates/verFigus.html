@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="titulos_figus">
+
+    <h1>Total completado: {{porcentaje}}%</h1>
+    <h2>Total figuritas: {{cantidad}}</h2>
+    <form action="" method="GET">
+
+        <input type="search" name="buscar" id="">
+        <button type="submit" class="boton_buscar">Buscar</button>
+    </form>
+    
+</div>
+
+
+<main class="main__verFigus">
+    {% for figu in figus %}
+    <div class="div__figus">
+        
+
+        <p class="nom_figu">
+         
+            {{figu}}
+        </p>
+        <form  action="{% url 'figus_delete' figu.figurita %}" method="POST">
+            {% csrf_token %}
+            <button class="boton_borrar">
+                Eliminar
+            </button>
+        </form>
+        
+    </div>
+    
+    {% endfor %}
+</main>
+    
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuritas</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <img class="logardo" src="{% static 'logo.png' %}" alt="">
+        <ul>
+          
+            <li class="nav__li"><a href="{% url 'figuritas' %}" class="nav__a">Agregar Figuritas</a></li>
+            <li class="nav__li"><a href="{% url 'verFigus' %}" class="nav__a">Ver Figuritas</a></li>
+            
+            {% if user.is_authenticated %}
+                <li class="nav__li"><a href="{% url 'logout' %}" class="nav__a">Cerrar sesion</a></li>
+            {% else %}
+                <li class="nav__li"><a href="{% url 'signup' %}" class="nav__a">Registrarse</a></li>
+                <li class="nav__li"><a href="{% url 'signin' %}" class="nav__a">Iniciar Sesión</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
