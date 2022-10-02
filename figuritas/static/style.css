@@ -266,4 +266,90 @@ label[for="id_num_figu"]{
 } 
 
 
+@media screen and (max-width: 760px) {
+    .nav__li{
+        display: block;
+    }
+    
+    .main__signup, .main__signin{
+        height: 60vh;
+    }
 
+    .nav__a{
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    .nav__li:hover > .nav__a{
+        padding: 5px;
+    }
+    
+    .nav__a:hover{
+        background-color: rgb(202, 202, 202);
+        
+             
+    }
+
+    .nav__li:hover{
+        transform: translateY(0px);
+        
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    .b{
+        width: 350px;
+        height: 450px;
+    }
+
+    .logo{
+        width: 180px;
+    }
+
+    .home__title{
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+
+     .b{
+        width: 300px;
+        height: 350px;
+    }
+
+    .logo{
+        width: 130px;
+       
+    }
+
+    .home__title{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .boton{
+        
+        padding: 20px 0px;
+       
+        
+    }
+
+    .total_complete{
+        font-size: 25px;
+    }
+
+    input[name="buscar"]{
+        width: 200px;
+    }
+    .form__signup{
+        height: 500px;
+    }
+    .boton_sign{
+        margin-bottom: 30px;
+    }
+
+}

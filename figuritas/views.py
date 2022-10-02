@@ -151,7 +151,7 @@ def verFigus(request):
     if busqueda:
         figuritas = figus_totales.objects.filter(
             figurita__icontains=busqueda
-        ).distinct()
+        ).distinct().order_by()
   
     
 
